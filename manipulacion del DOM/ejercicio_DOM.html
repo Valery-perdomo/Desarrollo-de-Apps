@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Ejercicio DOM - Modo Noche</title>
+<style>
+    body { font-family: Arial, sans-serif; padding: 30px; text-align: center; transition: 0.3s; }
+    .caja { padding: 20px; border: 2px solid #ccc; border-radius: 8px; margin: 20px auto; max-width: 300px; }
+    
+    .modo-oscuro { background-color: #1a1a1a; color: white; }
+</style>
+</head>
+<body id="pantalla">
+
+<h1 id="titulo">Modo Día ☀️</h1>
+<button id="miBoton">Cambiar a Modo Noche</button>
+
+<div id="contenedor" class="caja">
+    <p id="mensaje">La pantalla está clara</p>
+</div>
+
+<script>
+
+    const pantalla = document.getElementById('pantalla');
+    const titulo = document.getElementById('titulo');
+    const boton = document.getElementById('miBoton');
+    const mensaje = document.getElementById('mensaje');
+
+
+    boton.addEventListener('click', () => {
+
+    if (pantalla.classList.contains('modo-oscuro')) {
+        pantalla.classList.remove('modo-oscuro');
+        titulo.textContent = "Modo Día ☀️";
+        mensaje.textContent = "La pantalla está clara";
+        boton.textContent = "Cambiar a Modo Noche";
+    } else {
+        pantalla.classList.add('modo-oscuro');
+        titulo.textContent = "Modo Noche 🌙";
+        mensaje.textContent = "La pantalla está oscura";
+        boton.textContent = "Cambiar a Modo Día";
+    }
+    });
+</script>
+
+</body>
+</html>
