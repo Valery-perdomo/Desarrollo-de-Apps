@@ -1,0 +1,13 @@
+<ion-header>
+  <ion-toolbar color="primary"><ion-title>Selector desplegable</ion-title></ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <ion-item>
+    <ion-select [(ngModel)]="color" label="Color" placeholder="Selecciona uno">
+      <ion-select-option value="rojo">Rojo</ion-select-option>
+      <ion-select-option value="verde">Verde</ion-select-option>
+      <ion-select-option value="azul">Azul</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <p>Seleccionado: {{ color }}</p>
+</ion-content>

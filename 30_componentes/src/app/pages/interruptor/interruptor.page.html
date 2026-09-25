@@ -1,0 +1,9 @@
+<ion-header>
+  <ion-toolbar color="primary"><ion-title>Interruptor</ion-title></ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <ion-toggle [(ngModel)]="activo" enableOnOffLabels>
+    Activar opción
+  </ion-toggle>
+  <p>Estado: {{ activo ? 'ON' : 'OFF' }}</p>
+</ion-content>

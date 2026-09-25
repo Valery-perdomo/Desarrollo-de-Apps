@@ -1,0 +1,11 @@
+<ion-header>
+  <ion-toolbar color="primary"><ion-title>Segmento</ion-title></ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <ion-segment [(ngModel)]="vista">
+    <ion-segment-button value="todos">Todos</ion-segment-button>
+    <ion-segment-button value="favoritos">Favoritos</ion-segment-button>
+    <ion-segment-button value="recientes">Recientes</ion-segment-button>
+  </ion-segment>
+  <p>Vista: {{ vista }}</p>
+</ion-content>

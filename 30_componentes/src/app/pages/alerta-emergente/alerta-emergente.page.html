@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-toolbar color="primary"><ion-title>Alerta emergente</ion-title></ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <ion-button (click)="mostrar = true">Mostrar alerta</ion-button>
+
+  <ion-alert
+    [isOpen]="mostrar"
+    header="Confirmación"
+    message="¿Quieres continuar?"
+    [buttons]="botones"
+    (didDismiss)="mostrar = false">
+  </ion-alert>
+</ion-content>

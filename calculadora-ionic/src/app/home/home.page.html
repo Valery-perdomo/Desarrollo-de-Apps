@@ -1,0 +1,77 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>Calculadora</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-card class="calculadora-card">
+    <ion-card-content>
+
+      <ion-list lines="full">
+        <ion-item>
+          <ion-input
+            type="number"
+            label="Número 1"
+            labelPlacement="floating"
+            placeholder="Escribe un número"
+            [(ngModel)]="numero1">
+          </ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input
+            type="number"
+            label="Número 2"
+            labelPlacement="floating"
+            placeholder="Escribe un número"
+            [(ngModel)]="numero2">
+          </ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-select
+            label="Operación"
+            labelPlacement="floating"
+            interface="popover"
+            [(ngModel)]="operacion">
+            <ion-select-option value="sumar">Sumar</ion-select-option>
+            <ion-select-option value="restar">Restar</ion-select-option>
+            <ion-select-option value="multiplicar">Multiplicar</ion-select-option>
+            <ion-select-option value="dividir">Dividir</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-list>
+
+      <ion-button expand="block" class="ion-margin-top" (click)="calcular()">
+        Calcular
+      </ion-button>
+
+      <div class="resultado">
+        <strong>Resultado:</strong> {{ resultado }}
+      </div>
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="historial-card">
+    <ion-list>
+      <ion-list-header>
+        <ion-label>Historial</ion-label>
+        <ion-button fill="clear" color="danger" size="small" (click)="limpiarHistorial()">
+          Limpiar historial
+        </ion-button>
+      </ion-list-header>
+
+      @for (item of historial; track $index) {
+        <ion-item>
+          <ion-label>{{ item }}</ion-label>
+        </ion-item>
+      } @empty {
+        <ion-item lines="none">
+          <ion-note>Todavía no hay operaciones</ion-note>
+        </ion-item>
+      }
+    </ion-list>
+  </ion-card>
+</ion-content>

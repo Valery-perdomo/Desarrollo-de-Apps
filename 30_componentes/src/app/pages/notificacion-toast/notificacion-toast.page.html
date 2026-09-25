@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-toolbar color="primary"><ion-title>Notificación Toast</ion-title></ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <ion-button (click)="mostrar = true">Mostrar Toast</ion-button>
+
+  <ion-toast
+    [isOpen]="mostrar"
+    message="Operación realizada correctamente"
+    duration="2000"
+    position="bottom"
+    (didDismiss)="mostrar = false">
+  </ion-toast>
+</ion-content>
+

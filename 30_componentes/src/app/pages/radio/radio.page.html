@@ -1,0 +1,11 @@
+<ion-header>
+  <ion-toolbar color="primary"><ion-title>Botón radio</ion-title></ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <ion-radio-group [(ngModel)]="opcion">
+    <ion-radio value="uno" labelPlacement="end">Opción 1</ion-radio><br>
+    <ion-radio value="dos" labelPlacement="end">Opción 2</ion-radio><br>
+    <ion-radio value="tres" labelPlacement="end">Opción 3</ion-radio>
+  </ion-radio-group>
+  <p>Elegida: {{ opcion }}</p>
+</ion-content>

@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Componentes Ionic 30</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-list>
+    @for (comp of componentes; track comp.id) {
+      <ion-item button [routerLink]="[comp.ruta]" detail="true">
+        <ion-icon slot="start" [name]="comp.icono"></ion-icon>
+        <ion-label>
+          <h2>{{ comp.nombre }}</h2>
+          <p>{{ comp.desc }}</p>
+        </ion-label>
+      </ion-item>
+    }
+  </ion-list>
+</ion-content>

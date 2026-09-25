@@ -1,0 +1,15 @@
+.calculadora-card,
+.historial-card {
+  max-width: 420px;
+  margin: 1rem auto;
+}
+
+.resultado {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  background: var(--ion-color-light);
+  color: var(--ion-text-color, #000);
+  border-radius: 8px;
+  text-align: center;
+  font-size: 1.1rem;
+}

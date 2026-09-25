@@ -1,0 +1,29 @@
+ion-list {
+  --background: transparent;
+}
+
+ion-item {
+  --padding-top: 12px;
+  --padding-bottom: 12px;
+  --padding-start: 16px;
+  --padding-end: 16px;
+  --min-height: 72px;
+  margin-bottom: 6px;
+  border-radius: 12px;
+}
+
+ion-icon[slot='start'] {
+  font-size: 1.5rem;
+  margin-right: 8px;
+}
+
+ion-label h2 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+ion-label p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
